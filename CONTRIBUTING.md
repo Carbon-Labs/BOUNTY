@@ -1,4 +1,4 @@
-Contributing to BOUNTY
+Contributing to BOUNTY (INCOMPLETE)
 ======================
 
 First of all, thanks for taking the time to contribute.
