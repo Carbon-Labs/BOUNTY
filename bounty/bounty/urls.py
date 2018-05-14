@@ -11,6 +11,7 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
+# TODO - move this into a more logical file.
 admin.site.site_header = 'Bounty Administration'
 admin.site.index_title = 'Dashboard'
 admin.site.site_title = 'Bounty Administration'
