@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block title %}Bounty{% endblock %}
+
+{% block header %}
+    <div id="header">
+        <div class="container">
+            <h1>Support Projects That You Love!</h1>
+            <h3>Cryptocurrency Crowdfunding Platform</h3>
+            <div class="row quickoptions">
+                <div class="col-md-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading"><h3 class="panel-title">Funding</h3></div>
+                        <div class="panel-body">
+                            <span>Add task code below to sponsor.</span>
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword3"
+                                           placeholder="Task Id">
+                                </div>
+                                <button type="submit" class="btn btn-info">Sign in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading"><h3 class="panel-title">Get Funding</h3></div>
+                        <div class="panel-body">
+                            <span>Add your own project today.</span>
+                            <a href="/projects/get-started" class="btn btn-warning">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading"><h3 class="panel-title">Discover</h3></div>
+                        <div class="panel-body">
+                            <span>Browse all projects.</span>
+                            <a href="/projects" class="btn btn-danger">Browse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="quickstart">
+        <div class="container">
+            <h4 id="update-ribbon">Latest Update: <span>We are working on the project page.</span></h4>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <h3 class="pull-left">Featured Projects <span class="primary">see all</span></h3>
+    </div>
+    <div class="row">
+        {% for project in featured %}
+            <a href="/projects/{{ project.slug }}">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    {% if project.thumbnail %}
+                        <img src="media/{{ project.thumbnail }}" alt="{{ project.name }}">
+                    {% else %}
+                        <img src="{% static "images/bounty.png" %}" alt="Placeholder">
+                    {% endif %}
+                    <div class="caption">
+                        <h4>{{ project.name }}</h4>
+                        <p class="blurb">{{ project.blurb }}</p>
+                        <p><b>$100</b> funded<br>
+                            <b>2%</b> funded<br>
+                            <b>30</b> supporters</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <h3 class="pull-left">New Projects <span class="primary">see all</span></h3>
+    </div>
+    <div class="row">
+        {% for project in projects %}
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    {% if project.thumbnail %}
+                        <img src="media/{{ project.thumbnail }}" alt="{{ project.name }}">
+                    {% else %}
+                        <img src="{% static "images/bounty.png" %}" alt="Placeholder">
+                    {% endif %}
+                    <div class="caption">
+                        <h4>{{ project.name }}</h4>
+                        <p class="blurb">{{ project.blurb }}</p>
+                        <p><b>$100</b> funded<br>
+                            <b>2%</b> funded<br>
+                            <b>30</b> supporters</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block modals %}
+    <div class="modal fade" id="sponsorModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+{% endblock %}

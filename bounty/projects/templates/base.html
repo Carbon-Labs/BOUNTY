@@ -1,0 +1,17 @@
+{% extends 'bootstrap.html' %}
+{% load static %}
+
+{% load bootstrap3 %}
+
+{% block bootstrap3_content %}
+    {% include 'partials/topnav.html' %}
+    {%  block header %}(no header){% endblock %}
+    <div class="container">
+        {% block content %}(no content){% endblock %}
+    </div>
+    {% include 'partials/footer.html' %}
+{% endblock %}
+
+{% block modals %}
+
+{% endblock %}

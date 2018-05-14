@@ -1,0 +1,118 @@
+.navbar-brand {
+    color: #5b80b2;
+    font-size: 2em;
+}
+
+#search {
+    width: 130px;
+}
+
+#search:focus {
+    border-left: none;
+    width: 300px;
+}
+
+#top-announcement {
+    background: #bce8f1;
+    text-align: center;
+}
+
+h3 span {
+    color: #428bca;
+    font-size: 0.7em;
+    padding-left: 2em;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+#header {
+    background: #555555;
+    color: white;
+    text-align: center;
+}
+
+#quickstart {
+    background: #484848;
+    color: white;
+}
+
+#footer {
+    border-top: 1px solid #DBDBDB;
+    color: #767676;
+    margin-top: 100px;
+    padding-top: 3em;
+}
+    #footer li.list-header {
+        color: #484848;
+        font-weight: bold;
+        margin-bottom: 0.75em;
+    }
+
+    #footer #footer-links {
+        border-top: 1px solid #DBDBDB;
+        margin-top: 1em;
+        padding-top: 0.5em;
+    }
+
+.quickoptions {
+    margin-top: 2em;
+}
+
+.quickoptions .panel-body span {
+    color: #555555;
+    display: block;
+    font-size: 1.3em;
+    padding-bottom: 0.5em;
+}
+
+p.blurb {
+    color: #BEBEBE;
+}
+
+#update-ribbon span {
+    color: #428bca;
+}
+
+.project-details {
+    margin-top: 2em;
+}
+
+.project-sidebar h3 {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.project-sidebar h2 span {
+    color: #BEBEBE;
+    font-size: 0.7em;
+}
+
+.project-sidebar .tags {
+    color: #428bca;
+    border-bottom: 2px solid #428bca;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+}
+
+.btn-bigger {
+    font-size: 1.2em;
+    padding: 0.9em 0;
+}
+
+#project-title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#project-blurb {
+    margin-top: 0;
+    paddin-top: 0;
+}
+
+#profile-thumbnail {
+    width: 60px;
+    float: left;
+    margin-right: 1em;
+}

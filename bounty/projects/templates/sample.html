@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block title %}Bounty{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="row project-details">
+        <div class="col-md-8">
+            {% if project.thumbnail %}
+                <img class="img-responsive img-rounded" src="/media/{{ project.thumbnail }}" alt="{{ project.name }}">
+                <hr/>
+            {% endif %}
+            <h2 id="project-title">{{ project.name }}</h2>
+            <h3 id="project-blurb">{{ project.blurb }}</h3>
+            <small>{{ project.reference }}</small>
+            <hr/>
+            {{ project.description }}
+        </div>
+        <div class="col-md-4 project-sidebar">
+            <div class="tags">
+                {{ project.category }} - {{ project.subcategory }}
+            </div>
+            <a class="btn btn-block btn-success btn-bigger" href="#">DONATE NOW</a>
+            <a class="btn btn-block btn-primary" href="#">SHARE ON FACEBOOK</a>
+            <a class="btn btn-block btn-primary" href="#">TWEET</a>
+            <hr/>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 89%;">
+                    89%
+                </div>
+            </div>
+            <h2>$890 <span>of $1000 received</span></h2>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">$</div>
+                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Donate Now</button>
+            </form>
+            <hr />
+            <img id="profile-thumbnail" src="/media/{{ project.client.profile_photo }}" alt="{{ project.client }}" class="img-responsive img-circle" />
+            {{ project.client }}<br>
+            {{ project.client.website }}
+            <hr />
+            <!--
+            <ul id="project-stats" class="list-unstyled">
+                <li><span>Date Created: </span></li>
+                <li><span>Date Updated: </span></li>
+                <li><span>Supporters: </span>23</li>
+                <li><span>Funding: </span>$597.23</li>
+            </ul>
+            -->
+        </div>
+    </div>
+{% endblock %}
