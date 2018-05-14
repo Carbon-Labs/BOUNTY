@@ -16,7 +16,7 @@ Before creating bug reports, please check [this list](#before-submitting-a-bug-r
 
 > **Note: ** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
 
-####Before Submitting A Bug Report
+#### Before Submitting A Bug Report
 
 
-####How Do I Submit A (Good) Bug Report?
+#### How Do I Submit A (Good) Bug Report?
