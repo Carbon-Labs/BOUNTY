@@ -1,3 +1,3 @@
 from django.db import models
-
-# Create your models here.
+from smart_selects.db_fields import ChainedForeignKey
+import uuid

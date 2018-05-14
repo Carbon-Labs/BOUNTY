@@ -1,7 +1,16 @@
+from django.conf.urls import url, include
 from django.contrib import admin
-from django.urls import include, path
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
-    path('projects/', include('projects.urls')),
-    path('admin/', admin.site.urls),
-]
+    url(r'^projects/', include('projects.urls')),
+    url(r'^hq/', admin.site.urls),
+    url(r'^chaining/', include('smart_selects.urls')),
+    url(r'', include('projects.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+admin.site.site_header = 'Bounty Administration'
+admin.site.index_title = 'Dashboard'
+admin.site.site_title = 'Bounty Administration'
