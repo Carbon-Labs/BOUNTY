@@ -9,15 +9,31 @@ class TasksInline(admin.TabularInline):
 
 @admin.register(models.Project)
 class ProjectAdmin(admin.ModelAdmin):
+    readonly_fields = ('reference',)
+    #fields = (('name', 'reference'),'slug')
+    fieldsets = (
+        ('Basic Details', {
+            'fields' : (('name', 'reference'),'client','slug','thumbnail'),
+        }),
+        ('Category', {
+            'classes': ('collapse',),
+            'fields' : ('category', 'subcategory'),
+        }),
+        ('Description', {
+            'classes': ('collapse',),
+            'fields' : ('blurb','description'),
+        }),
+
+    )
+
     prepopulated_fields = {"slug": ("name",)}
-    list_display = ('name', 'client','updated_at', 'status')
+    list_display = ('name','reference','client','updated_at', 'status')
     list_filter = ('status', 'created_at', 'updated_at')
     search_fields = ('name',)
     ordering = ('name',)
     date_hierarchy = 'created_at'
     inlines = [
         TasksInline,
-
     ]
 
 @admin.register(models.Client)

@@ -25,9 +25,9 @@ def project(request, slug):
     try:
         p = models.Project.objects.get(slug=slug)
     except models.Project.DoesNotExist:
-        raise Http404("Project does not exist")
+        raise Http404("Sorry. That project does not exist")
     return render(
         request,
-        'sample.html',
+        'projectdetail.html',
         context={'project': p}
     )

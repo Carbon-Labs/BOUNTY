@@ -51,14 +51,12 @@
             {{ project.client }}<br>
             {{ project.client.website }}
             <hr />
-            <!--
             <ul id="project-stats" class="list-unstyled">
-                <li><span>Date Created: </span></li>
-                <li><span>Date Updated: </span></li>
-                <li><span>Supporters: </span>23</li>
-                <li><span>Funding: </span>$597.23</li>
+                <li><span>Date Created: {{project.created_at}}</span></li>
+                <li><span>Date Updated: {{project.created_at}}</span></li>
+                <li><span>Supporters: </span></li>
+                <li><span>Funding: </span></li>
             </ul>
-            -->
         </div>
     </div>
 {% endblock %}

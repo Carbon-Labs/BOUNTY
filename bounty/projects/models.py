@@ -67,7 +67,7 @@ class Project(models.Model):
     thumbnail = models.ImageField(blank=True, upload_to='images/projects')
     featured = models.BooleanField(default=0)
     reference = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
-    slug = models.SlugField(blank=False, unique=True)
+    slug = models.SlugField(blank=False, unique=True, help_text="Is used to generate a unique URL for the project.")
 
     def __str__(self):
         return self.name

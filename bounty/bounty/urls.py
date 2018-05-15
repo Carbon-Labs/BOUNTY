@@ -12,6 +12,6 @@ urlpatterns = [
 
 
 # TODO - move this into a more logical file.
-admin.site.site_header = 'Bounty Administration'
+admin.site.site_header = 'BOUNTY Headquarters'
 admin.site.index_title = 'Dashboard'
-admin.site.site_title = 'Bounty Administration'
+admin.site.site_title = 'BOUNTY Headquarters'
