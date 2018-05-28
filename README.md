@@ -1,4 +1,4 @@
-BOUNTY
+![Bounty](https://github.com/liberation-online/BOUNTY/blob/master/Logo/PNG/BOUNTY01.png)
 -----
 
 ### Quick Start
